@@ -21,5 +21,9 @@ export default function reducer (state, action) {
     return []
   }
   
+  if (action.type === "INIT") {
+    return action.data
+  }
+  
   throw new Error("no matching type")
 }
