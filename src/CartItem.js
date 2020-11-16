@@ -2,6 +2,9 @@ import React from 'react'
 import { useGlobalContext } from './context'
 const CartItem = ({ id, img, title, price, amount }) => {
   const { dispatch, count, setCount, total, setTotal } = useGlobalContext()
+  
+  price = Number(price)
+  
   return (
     <article className='cart-item'>
       <img src={img} alt={title} />
